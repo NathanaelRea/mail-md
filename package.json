@@ -3,28 +3,37 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "bin": {
+    "mail-md": "./dist/cli.js"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "tsc && pnpm copy:assets",
+    "copy:assets": "copyfiles -u 1 'src/**/*.{html,css}' dist/",
+    "dev": "tsx src/cli.ts",
+    "link": "pnpm link --global",
+    "preview": "pnpm build && pnpm link && mail-md --preview"
   },
   "dependencies": {
     "chalk": "^5.6.2",
     "commander": "^14.0.2",
     "dotenv": "^17.2.3",
+    "highlight.js": "^11.11.1",
     "marked": "^17.0.0",
+    "marked-highlight": "^2.2.3",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "resend": "^6.4.2"
+    "resend": "^6.4.2",
+    "tsx": "^4.20.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
+    "@types/highlight.js": "^10.1.0",
     "@types/node": "^24.6.0",
     "@types/react": "^19.1.16",
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.4",
     "babel-plugin-react-compiler": "^19.1.0-rc.3",
+    "copyfiles": "^2.4.1",
     "eslint": "^9.36.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.22",

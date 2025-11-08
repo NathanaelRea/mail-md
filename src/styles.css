@@ -1,0 +1,341 @@
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue",
+    Arial, sans-serif;
+  line-height: 1.7;
+  color: #e0e0e0;
+  background: #0a0a0a;
+  padding: 20px;
+}
+
+/* Container */
+.email-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+}
+
+.email-content {
+  padding: 40px 32px;
+}
+
+/* Header Styles */
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #f0f0f0;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  line-height: 1.3;
+  border-bottom: 2px solid #3a3a3a;
+  padding-bottom: 8px;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e8e8e8;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #d8d8d8;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* Paragraph Styles */
+p {
+  margin-bottom: 16px;
+  font-size: 16px;
+  color: #c8c8c8;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Link Styles */
+a {
+  color: #60d9fa;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(96, 217, 250, 0.3);
+  transition: all 0.2s ease;
+}
+
+a:hover {
+  color: #8fe7ff;
+  border-bottom-color: #60d9fa;
+}
+
+/* List Styles */
+ul,
+ol {
+  margin: 16px 0 16px 24px;
+  padding-left: 0;
+}
+
+li {
+  margin-bottom: 8px;
+  color: #c8c8c8;
+  line-height: 1.6;
+}
+
+ul li::marker {
+  color: #60d9fa;
+}
+
+ol li::marker {
+  color: #60d9fa;
+}
+
+/* Strong and Emphasis */
+strong {
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+em {
+  font-style: italic;
+  color: #a8e6cf;
+}
+
+/* Code Styles */
+code {
+  font-family: "Monaco", "Menlo", "Courier New", monospace;
+  background: #2a2a2a;
+  color: #ff6b9d;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  border: 1px solid #3a3a3a;
+}
+
+pre {
+  background: #0f0f0f;
+  color: #e0e0e0;
+  padding: 0;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 20px 0;
+  border-left: 4px solid #60d9fa;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 20px;
+  border: none;
+  font-size: 14px;
+  line-height: 1.5;
+  display: block;
+}
+
+/* Ensure highlight.js classes work */
+pre code.hljs {
+  padding: 20px;
+  background: #0f0f0f;
+}
+
+/* Blockquote Styles */
+blockquote {
+  border-left: 4px solid #60d9fa;
+  background: #242424;
+  padding: 16px 20px;
+  margin: 20px 0;
+  border-radius: 0 6px 6px 0;
+  color: #b8e6f0;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0;
+  color: inherit;
+}
+
+/* Image Styles */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 20px 0;
+  display: block;
+  border: 1px solid #2a2a2a;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  font-size: 15px;
+  background: #1a1a1a;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #2a2a2a;
+}
+
+th {
+  background: #2a2a2a;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 12px;
+  text-align: left;
+  border: 1px solid #3a3a3a;
+}
+
+td {
+  padding: 12px;
+  border: 1px solid #2a2a2a;
+  color: #c8c8c8;
+}
+
+tr:nth-child(even) {
+  background: #202020;
+}
+
+tr:hover {
+  background: #242424;
+}
+
+/* Horizontal Rule */
+hr {
+  border: none;
+  border-top: 2px solid #2a2a2a;
+  margin: 32px 0;
+}
+
+/* Button/CTA Styles */
+.button,
+a.button {
+  display: inline-block;
+  background: linear-gradient(135deg, #60d9fa 0%, #4facfe 100%);
+  color: #0a0a0a !important;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  margin: 8px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(96, 217, 250, 0.3);
+}
+
+.button:hover,
+a.button:hover {
+  background: linear-gradient(135deg, #8fe7ff 0%, #60d9fa 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(96, 217, 250, 0.4);
+  border-bottom: none;
+}
+
+/* Footer Styles */
+.email-footer {
+  background: #151515;
+  padding: 24px 32px;
+  text-align: center;
+  border-top: 1px solid #2a2a2a;
+  font-size: 14px;
+  color: #808080;
+}
+
+.email-footer p {
+  margin: 8px 0;
+  font-size: 14px;
+  color: #808080;
+}
+
+.email-footer a {
+  color: #60d9fa;
+  border-bottom-color: rgba(96, 217, 250, 0.3);
+}
+
+.email-footer a:hover {
+  color: #8fe7ff;
+}
+
+/* Accent Elements */
+.accent {
+  color: #60d9fa;
+}
+
+.highlight {
+  background: rgba(96, 217, 250, 0.15);
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .email-content {
+    padding: 24px 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  pre {
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th,
+  td {
+    padding: 8px;
+  }
+}
+
+/* Dark Mode Override (keeps consistency) */
+@media (prefers-color-scheme: dark) {
+  /* Already dark, so just ensure consistency */
+  body {
+    background: #0a0a0a;
+  }
+
+  .email-container {
+    background: #1a1a1a;
+    border-color: #2a2a2a;
+  }
+}
