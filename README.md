@@ -13,6 +13,8 @@ pnpm link
 
 mail-md ./docs/example.md --preview
 
+mail-md ./docs/example.md --test me@mydomain.com
+
 mail-md ./docs/example.md
 ```
 
@@ -20,7 +22,11 @@ mail-md ./docs/example.md
 
 [Example markdown](./docs/example.md)
 
-![Preview Image](./docs/example.png)
+![Example preview](./docs/example_preview.png)
+
+> note that some email providers will add a white border around the email
+
+![Example email](./docs/example_email.png)
 
 ## Limitations
 
